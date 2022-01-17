@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <img src="/assets/LiveLoad Logo.png" alt="" id="main-logo">
+  <span class="navbar-spacer"></span>
+  <button mat-icon-button id="message-btn" class="navbar-button" (click)="openMessages()">
+    <mat-icon>chat</mat-icon>
+  </button>
+  <button mat-icon-button id="notification-btn" class="navbar-button" (click)="openNotifications()">
+    <mat-icon matBadge={{notifications}} matBadgeColor="warn" matBadgeSize="small">notifications</mat-icon>
+  </button>
+  <button mat-button id="current-user-box" class="navbar-button" [matMenuTriggerFor]="menu" >
+<!--    <img src="{{profileSrc}}" alt="" class="profile-picture">-->
+    <span class="username">{{username}}</span>
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" xPosition="before" class="user-menu">
+    <button mat-menu-item (click)="openSettings()">Settings</button>
+    <button mat-menu-item (click)="logOut()">Log Out</button>
+  </mat-menu>
+</mat-toolbar>
+

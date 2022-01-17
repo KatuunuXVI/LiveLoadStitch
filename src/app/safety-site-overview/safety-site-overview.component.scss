@@ -1,0 +1,103 @@
+@import "variables.scss";
+
+.safety-site-overview-content {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  //align-items: center;
+  height: 325px;
+  margin: 0 16px 16px 16px;
+}
+
+.safety-site-left {
+  width: 50%;
+  //margin-top: -20px !important;
+}
+
+.safety-site-right {
+  margin-left: 15px;
+  width: 50%;
+  height: 100%;
+}
+
+.safety-site-header {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  white-space: nowrap;
+
+  margin-left: 10px;
+  //margin-top: -20px;
+}
+
+.safety-site-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.safety-site-user-container {
+  margin-left: 20px;
+}
+
+.safety-site-left-container {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.safety-site-user-header {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.safety-site-user-header-spacer {
+  flex: 1 1 auto;
+}
+
+.safety-site-user-title {
+  font-size: 20px;
+}
+
+.safety-site-user-list {
+  margin-top: 10px;
+  overflow: auto;
+  height: 205px;
+}
+
+.safety-site-chart-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  height: 205px;
+}
+
+.button-container {
+  width: 100px;
+}
+
+.chart-button {
+  width: 200%;
+  margin-top: 8px;
+  padding: 0 10px;
+}
+
+.chart-button mat-icon {
+  font-size: 20px;
+  height: 20px;
+  width: 40px;
+  margin-right: 5px;
+}
+
+.chart-button-selected {
+  background-color: $primary-text;
+  color: $primary;
+}
+
+.safety-site-chart-box {
+  width: 100%;
+  margin-left: -5px;
+}

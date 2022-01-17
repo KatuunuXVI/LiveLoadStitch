@@ -1,0 +1,68 @@
+@import "variables.scss";
+
+.unit-update-card {
+  margin-bottom: 10px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.title-box {
+  width: calc(100% - 90px);
+  margin-right: 8px;
+  font-size: 15px;
+}
+
+.time-box {
+  width: 90px;
+  font-size: 12px;
+  text-align: right;
+}
+
+.hyperlink {
+  color: #68b2e6;
+}
+
+.move-map {
+  height: 200px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.battery-container {
+  margin-top: 10px;
+}
+
+.battery-card {
+  margin-top: 7px;
+  padding: 5px 10px;
+  background-color: $primary-dark;
+  display: flex;
+  flex-direction: row;
+}
+
+.battery-container a {
+  text-decoration: none;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.battery-info {
+  color: $warning-color;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.battery-icon {
+  transform: rotate(90deg);
+}
+
+.battery-percent {
+  margin-right: 5px;
+}

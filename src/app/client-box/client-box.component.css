@@ -1,0 +1,40 @@
+.client-card {
+  /*height: 80%;*/
+  margin-right: 10px;
+  width: 180px;
+  /*min-width: 500px;*/
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.client-title-box {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.client-name {
+  font-size: 18px;
+  /*margin-right: 25px;*/
+}
+
+.client-spacer {
+  flex: 1 1 auto;
+}
+
+.client-edit {
+  height: 28px;
+  width: 28px;
+  line-height: 28px;
+}
+
+.client-edit-icon {
+  font-size: 18px;
+}
+
+.client-info-container {
+  margin-left: 5px;
+  margin-top: 1px;
+}

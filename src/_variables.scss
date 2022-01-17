@@ -1,0 +1,82 @@
+// Import material theming functions
+@import '~@angular/material/theming';
+
+$liveload-primary-palette: (
+  50 : #e3e5e7,
+  100 : #babec3,
+  200 : #8c939b,
+  300 : #5e6773,
+  400 : #3c4755,
+  500 : #192637,
+  600 : #162231,
+  700 : #121c2a,
+  800 : #0e1723,
+  900 : #080d16,
+  A100 : #588fff,
+  A200 : #256dff,
+  A400 : #0050f1,
+  A700 : #0048d7,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$liveload-accent-palette: (
+    50 : #e5e7ea,
+    100 : #bec4cb,
+    200 : #939ca9,
+    300 : #677486,
+    400 : #47576c,
+    500 : #263952,
+    600 : #22334b,
+    700 : #1c2c41,
+    800 : #172438,
+    900 : #0d1728,
+    A100 : #679aff,
+    A200 : #3478ff,
+    A400 : #0156ff,
+    A700 : #004de6,
+    contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #ffffff,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #ffffff,
+      A400 : #ffffff,
+      A700 : #ffffff,
+    )
+  );
+
+$liveload-frontend-primary: mat-palette($liveload-primary-palette);
+$liveload-frontend-accent: mat-palette($liveload-accent-palette);
+$liveload-frontend-warn: mat-palette($mat-red);
+
+// Create your Sass color vars (will be available in all the project)
+$primary: mat-color($liveload-frontend-primary);
+$primary-dark: mat-color($liveload-frontend-primary, 600);
+$primary-text: mat-color($liveload-frontend-primary, '500-contrast');
+$background-card-color: #222628;
+$active-color: #6ccf6c;
+$warning-color: #ea595a;
+$accent: mat-color($liveload-frontend-accent);
+$warn: mat-color($liveload-frontend-warn);

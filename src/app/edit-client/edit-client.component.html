@@ -1,0 +1,33 @@
+<div mat-dialog-title>
+  Edit Client:
+</div>
+<mat-dialog-content class="dialog-content-flex">
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput required [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput required type="email" [(ngModel)]="data.email">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Billing Type</mat-label>
+    <mat-select [(ngModel)]="data.billingType">
+      <mat-option [value]="'load'">
+        Per Load
+      </mat-option>
+      <mat-option [value]="'hour'">
+        Per Hour
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Rate ($ per unit)</mat-label>
+    <input matInput required type="number" [(ngModel)]="data.rate">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-stroked-button mat-dialog-close>Cancel</button>
+  <button color="warn" mat-stroked-button (click)="delete()">Delete</button>
+  <button mat-stroked-button cdkFocusInitial (click)="submitForm()">Submit</button>
+</mat-dialog-actions>

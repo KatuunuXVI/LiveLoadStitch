@@ -1,0 +1,52 @@
+@import "_variables.scss";
+
+.vid-spacer {
+  flex: 1 1 auto;
+}
+
+.vid-box {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  padding: 0 15px;
+  line-height: 48px;
+}
+
+.vid-value {
+  font-size: 19px;
+}
+
+.download-button {
+  line-height: normal;
+  padding: 6px 10px;
+  margin-right: 10px;
+}
+
+.download-icon {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+}
+
+.add-button {
+  margin-left: 15px;
+  line-height: normal;
+  padding: 6px 10px;
+}
+
+.dropdown {
+  margin-left: 15px;
+  /*margin-top: 20px;*/
+}
+
+.dropdown-inner {
+  /*padding: 15px 0 4px 0;*/
+}
+
+
+
+
+

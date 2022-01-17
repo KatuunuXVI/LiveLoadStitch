@@ -1,0 +1,20 @@
+<mat-card class="sub-card unit-card">
+  <div>
+    <div class="unit-card-title">
+      <span class="unit-card-name">{{name}}</span>
+      <button mat-icon-button class="unit-card-edit" (click)="openDialog()">
+        <mat-icon class="unit-card-edit-icon">edit</mat-icon>
+      </button>
+    </div>
+    <div class="unit-card-subtitle">
+      <div>{{address}}</div>
+      <div>Last Used: {{formmattedDate}}</div>
+    </div>
+  </div>
+  <span class="navbar-spacer"></span>
+  <div class="unit-status-bar">
+    <mat-icon class="icon-active">radio_button_checked</mat-icon>
+    <mat-icon>signal_cellular_alt</mat-icon>
+    <mat-icon class="battery-icon">battery_full</mat-icon>
+  </div>
+</mat-card>

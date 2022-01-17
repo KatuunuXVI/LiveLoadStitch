@@ -1,0 +1,51 @@
+<mat-card class="sub-card unit-update-card">
+  <div class="title-container">
+    <div class="title-box">
+      <ng-template [ngIf]="type==='move'">
+        {{unitName}} was moved.
+      </ng-template>
+      <ng-template [ngIf]="type==='productivity'">
+        {{numLoads}} loads were passed through <a routerLink="/main/productivity" class="hyperlink" [queryParams]="{unit: unitName}">{{unitName}}</a> in the past 24 hours.
+      </ng-template>
+      <ng-template [ngIf]="type==='battery'">
+        {{batteryData.length}} of your units {{(batteryData.length > 1) ? 'are' : 'is'}} running low on battery.
+      </ng-template>
+    </div>
+    <div class="time-box">
+      {{dateToUpdateString(datePosted)}} ago
+    </div>
+  </div>
+  <div>
+    <ng-template [ngIf]="type==='move'">
+      <div class="move-map">
+        <!--<google-map #gmap height="100%" width="100%" [options]="options">
+          <map-marker
+            *ngFor="let marker of markers"
+            [position]="marker.position"
+            [label]="marker.label"
+            [title]="marker.title"
+            [options]="marker.options"
+          >
+          </map-marker>
+        </google-map>-->
+        <app-map lat="29">
+
+        </app-map>
+      </div>
+    </ng-template>
+    <ng-template [ngIf]="type==='battery'">
+      <div class="battery-container">
+        <a routerLink="/units"  *ngFor="let unit of batteryData">
+          <mat-card class="battery-card">
+            <span>{{unit.unitName}}</span>
+            <span class="spacer"></span>
+            <span class="battery-info">
+              <span class="battery-percent">{{unit.percent}}%</span>
+              <mat-icon class="battery-icon">battery_full</mat-icon>
+            </span>
+          </mat-card>
+        </a>
+      </div>
+    </ng-template>
+  </div>
+</mat-card>

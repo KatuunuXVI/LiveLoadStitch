@@ -1,0 +1,14 @@
+<mat-card class="content-card client-card">
+  <div class="client-title-box">
+    <span class="client-name">{{name}}</span>
+    <span class="client-spacer"></span>
+    <button mat-icon-button class="client-edit" (click)="openDialog()">
+      <mat-icon class="client-edit-icon">edit</mat-icon>
+    </button>
+  </div>
+  <div class="client-info-container">
+    <div>{{email}}</div>
+    <div><u>Billing Type:</u> {{billingFormatted}}</div>
+    <div><u>Rate:</u> {{rateFormatted}}</div>
+  </div>
+</mat-card>

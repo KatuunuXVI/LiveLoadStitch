@@ -1,0 +1,29 @@
+.units-container {
+    height: 100%;
+    background-color: transparent;
+}
+
+.units-sidenav {
+    background-color: transparent;
+    border-right: none;
+    width: 30%;
+}
+
+.units-map-container {
+    background-color: transparent;
+    margin-left: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.units-map {
+    border-radius: 20px;
+    margin-left: 15px;
+    height: 100%;
+    width: calc(70% - 15px);
+}
+
+.map2{
+    width: 100%;
+    height: 100vh;
+}

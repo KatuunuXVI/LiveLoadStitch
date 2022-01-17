@@ -1,0 +1,33 @@
+<!--<img src="/assets/roadcam.gif" alt="" />-->
+<video playsinline autoplay muted loop>
+    <source src="/assets/roadcam.mp4" type="video/mp4">
+</video>
+<div class="main-container">
+    <img src="/assets/LiveLoad Logo.png" alt="" class="logo">
+    <br />
+    <div class="title">Create a Demo Account:</div>
+    <form>
+        <mat-form-field appearance="outline" class="username-field">
+            <mat-label>Username</mat-label>
+            <input matInput name="username" [(ngModel)]="username">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="password-field right-field">
+            <mat-label>Email</mat-label>
+            <input matInput name="email" type="email" [(ngModel)]="email">
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="outline" class="password-field">
+            <mat-label>Password</mat-label>
+            <input matInput name="password" type="password" [(ngModel)]="password">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="password-field right-field">
+            <mat-label>Verify Password</mat-label>
+            <input matInput name="passwordV" type="password" [(ngModel)]="passwordV">
+        </mat-form-field>
+        <br />
+        <button class="sub-button" mat-raised-button (click)="attemptSignup()">
+            Register
+            <mat-icon class="submit-icon">navigate_next</mat-icon>
+        </button>
+    </form>
+</div>

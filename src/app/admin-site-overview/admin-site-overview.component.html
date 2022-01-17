@@ -1,0 +1,83 @@
+
+<mat-card class="admin-site-overview-content content-card">
+  <div class="admin-site-left">
+    <div class="admin-site-header">
+      <span class="admin-site-title">{{sitename}}</span>
+      <button mat-icon-button (click)="openDialog()">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+    <div class="admin-site-left-container">
+      <div class="admin-site-user-header">
+        <span class="admin-site-user-title">Activity in the Past 24 Hours:</span>
+        <span class="admin-site-user-header-spacer"></span>
+      </div>
+      <div class="admin-site-chart-container">
+        <div class="admin-site-chart-box">
+          <ngx-charts-area-chart class="dark"
+                                 [scheme]="colorMap[currentChart]"
+                                 [legend]="false"
+                                 [showYAxisLabel]="true"
+                                 [xAxis]="true"
+                                 [yAxis]="true"
+                                 [yAxisLabel]="labelMap[currentChart]"
+                                 [timeline]="false"
+                                 [results]="resultMap[currentChart]"
+                                 [xScaleMin]="scaleMin"
+                                 [xScaleMax]="scaleMax"
+                                 [tooltipDisabled]="false"
+          >
+            <ng-template #tooltipTemplate let-model="model">
+              {{model.name.toLocaleString()}} <br />
+              <span style="font-size: 13px">{{model.series}}: {{model.value}}</span>
+            </ng-template>
+          </ngx-charts-area-chart>
+        </div>
+        <div class="button-container">
+          <button mat-raised-button class="chart-button"
+                  (click)="currentChart = 'safety'"
+                  [ngClass]="{'chart-button-selected' : currentChart === 'safety'}"
+          >
+            <mat-icon>payments</mat-icon>
+            Costs
+          </button>
+          <button mat-raised-button class="chart-button"
+                  (click)="currentChart = 'loads'"
+                  [ngClass]="{'chart-button-selected' : currentChart === 'loads'}"
+          >
+            <mat-icon>category</mat-icon>
+            Loads
+          </button>
+          <button mat-raised-button class="chart-button"
+                  (click)="currentChart = 'volume'"
+                  [ngClass]="{'chart-button-selected' : currentChart === 'volume'}"
+          >
+            <mat-icon>equalizer</mat-icon>
+            Volume
+          </button>
+          <button mat-raised-button class="chart-button"
+                  (click)="currentChart = 'survey'"
+                  [ngClass]="{'chart-button-selected' : currentChart === 'survey'}"
+          >
+            <mat-icon>local_shipping</mat-icon>
+            Trucks
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="admin-site-right">
+
+      <!--<google-map #gmap height="100%" width="100%" [options]="options" >
+        <map-marker
+          *ngFor="let marker of markers"
+          [position]="marker.position"
+          [label]="marker.label"
+          [title]="marker.title"
+          [options]="markerOptions"
+        >
+        </map-marker>
+      </google-map>-->
+
+  </div>
+</mat-card>

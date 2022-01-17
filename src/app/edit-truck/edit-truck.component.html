@@ -1,0 +1,26 @@
+<div mat-dialog-title>
+  Edit Truck:
+</div>
+<mat-dialog-content class="dialog-content-flex">
+  <mat-form-field appearance="outline">
+    <mat-label>License Plate</mat-label>
+    <input matInput required [(ngModel)]="data.license_plate">
+  </mat-form-field>
+<!--  <mat-form-field appearance="outline">-->
+<!--    <mat-label>Tag #</mat-label>-->
+<!--    <input matInput required [(ngModel)]="data.tag">-->
+<!--  </mat-form-field>-->
+  <mat-form-field appearance="outline">
+    <mat-label>Axles</mat-label>
+    <input matInput required type="number" [(ngModel)]="data.axles">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Color</mat-label>
+    <input matInput required [(ngModel)]="data.color">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-stroked-button mat-dialog-close>Cancel</button>
+  <button color="warn" mat-stroked-button (click)="delete()">Delete</button>
+  <button mat-stroked-button cdkFocusInitial (click)="submitForm()">Submit</button>
+</mat-dialog-actions>

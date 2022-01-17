@@ -1,0 +1,38 @@
+@import "variables.scss";
+
+.content-card {
+  background: $background-card-color;
+}
+
+.content-card-full {
+  height: calc(100% - 90px);
+  margin: 0 15px;
+}
+
+.content-card-split-first {
+  margin-right: 15px;
+}
+
+.content-card-split {
+  width: 50%;
+  height: 100%;
+}
+
+.card-holder {
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 80px);
+  margin: 0 15px;
+}
+
+.sub-card {
+  background: $primary;
+}
+
+.content-card-title {
+  font-size: 19px;
+}
+
+.icon-active {
+  color: $active-color;
+}

@@ -1,0 +1,26 @@
+<!--<img src="/assets/roadcam.gif" alt="" />-->
+<video playsinline autoplay muted loop>
+  <source src="/assets/roadcam.mp4" type="video/mp4">
+</video>
+<div class="main-container">
+  <img src="/assets/LiveLoad Logo.png" alt="" class="logo">
+  <br />
+  <form>
+    <mat-form-field appearance="outline" class="username-field">
+      <mat-label>Username</mat-label>
+      <input matInput name="username" [(ngModel)]="username">
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="outline" class="password-field">
+      <mat-label>Password</mat-label>
+      <input matInput name="password" type="password" [(ngModel)]="password">
+    </mat-form-field>
+    <br />
+    <button mat-raised-button (click)="attemptLogin()">
+      Login
+      <mat-icon class="submit-icon">navigate_next</mat-icon>
+    </button>
+    <br />
+    <div class="signup"><a class="signup-link" routerLink="/signup" routerLinkActive="active">Don't have an account? Register for a demo here.</a></div>
+  </form>
+</div>

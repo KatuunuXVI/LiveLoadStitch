@@ -1,0 +1,16 @@
+<app-titlebox
+  [titleText]="'Production History'"
+  [download]="true"
+  (whenDownload)="downloadData()">
+</app-titlebox>
+<ag-grid-angular
+  #agGrid
+  class="ag-theme-alpine-dark loads-grid"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  (firstDataRendered)="onFirstDataRendered($event)"
+  (rowDataChanged)="onGridReady($event)"
+>
+</ag-grid-angular>
+

@@ -1,0 +1,46 @@
+<mat-sidenav-container id="sidebar-container">
+  <mat-sidenav role="navigation" mode="side" opened id="sidebar">
+    <mat-nav-list>
+      <a routerLink="/main/" routerLinkActive="active">
+        <button mat-button class="sidebar-button" [ngClass]="{'sidebar-button-selected' : selection === '/main'}">
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+      </a>
+      <a routerLink="/main/sites" routerLinkActive="active">
+        <button mat-button class="sidebar-button" [ngClass]="{'sidebar-button-selected' : selection === '/main/sites'}">
+          <mat-icon>apartment</mat-icon>
+          <span>Sites</span>
+        </button>
+      </a>
+      <a routerLink="/main/units" routerLinkActive="active">
+        <button mat-button class="sidebar-button" [ngClass]="{'sidebar-button-selected' : selection === '/main/units'}">
+          <mat-icon>place</mat-icon>
+          <span>Units</span>
+        </button>
+      </a>
+      <a routerLink="/main/productivity"  routerLinkActive="active">
+        <button mat-button class="sidebar-button" [ngClass]="{'sidebar-button-selected' : selection === '/main/productivity'}">
+          <mat-icon>local_shipping</mat-icon>
+          <span>Productivity</span>
+        </button>
+      </a>
+      <a routerLink="/main/survey" routerLinkActive="active">
+        <button mat-button class="sidebar-button" [ngClass]="{'sidebar-button-selected' : selection === '/main/survey'}">
+          <mat-icon>category</mat-icon>
+          <span>Survey</span>
+        </button>
+      </a>
+
+      <a routerLink="/main/safety"  routerLinkActive="active">
+        <button mat-button class="sidebar-button" [ngClass]="{'sidebar-button-selected' : selection === '/main/safety'}">
+          <mat-icon>payments</mat-icon>
+          <span>Safety</span>
+        </button>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <app-views></app-views>
+  </mat-sidenav-content>
+</mat-sidenav-container>

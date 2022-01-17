@@ -1,0 +1,51 @@
+@import "variables.scss";
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(3px);
+}
+
+.main-container {
+  width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo {
+  width: 30%;
+  margin-top: 3.5em;
+  min-width: 250px;
+}
+
+.title {
+  margin-top: 0.5em;
+  font-size: 1.5em;
+}
+
+.username-field {
+  margin-top: 1em;
+}
+
+.password-field {
+  margin-top: 0.5em;
+}
+
+
+.sub-button {
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+}
+
+.submit-icon {
+  font-size: 18px;
+  height: 20px;
+  width: 13px;
+}

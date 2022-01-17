@@ -1,0 +1,30 @@
+@import "variables.scss";
+
+#sidebar-container {
+  height: calc(100% - 64px);
+  background-color: transparent;
+}
+
+#sidebar {
+  background-color: $primary-dark;
+  border-right: none;
+  box-shadow: 1px 0 5px -1px rgba(0,0,0,.2),
+      3px 0 20px 0 rgba(0,0,0,.14),
+      0 0 6px 0 rgba(0,0,0,.12);
+}
+
+.sidebar-button {
+  display: block;
+  margin: 5px 6px;
+  padding: 0 12px;
+}
+
+.sidebar-button-selected {
+  background-color: $primary-text;
+  color: $primary-dark;
+}
+
+.sidebar-button span {
+  margin-left: 10px;
+  font-size: 18px;
+}

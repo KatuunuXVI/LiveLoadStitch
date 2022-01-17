@@ -1,0 +1,10 @@
+<mat-card class="sub-card unit-info-card">
+  <div>
+    <div class="unit-name">{{name}}</div>
+    <div class="unit-address">{{address}}</div>
+  </div>
+  <span class="unit-spacer"></span>
+  <button mat-icon-button class="unit-info-button">
+    <mat-icon class="unit-info-button-icon" (click)="emitEvent()">{{buttonIcon}}</mat-icon>
+  </button>
+</mat-card>

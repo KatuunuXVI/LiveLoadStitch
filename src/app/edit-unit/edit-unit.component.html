@@ -1,0 +1,17 @@
+<div mat-dialog-title>
+  Edit Unit:
+</div>
+<mat-dialog-content class="dialog-content-flex">
+  <mat-form-field appearance="outline">
+    <mat-label>Unit Name</mat-label>
+    <input matInput required [(ngModel)]="data.name" maxlength="20">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Address / Description</mat-label>
+    <input matInput required [(ngModel)]="data.address" maxlength="35">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-stroked-button mat-dialog-close>Cancel</button>
+  <button mat-stroked-button (click)="submitForm()" cdkFocusInitial>Submit</button>
+</mat-dialog-actions>

@@ -1,0 +1,25 @@
+<div mat-dialog-title>
+  Add Truck:
+</div>
+<mat-dialog-content class="dialog-content-flex">
+  <mat-form-field appearance="outline">
+    <mat-label>Truck ID</mat-label>
+    <input matInput required [(ngModel)]="data.truck">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Tag #</mat-label>
+    <input matInput required [(ngModel)]="data.tag">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Axles</mat-label>
+    <input matInput required type="number" [(ngModel)]="data.axles">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Color</mat-label>
+    <input matInput required [(ngModel)]="data.color">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-stroked-button mat-dialog-close>Cancel</button>
+  <button mat-stroked-button cdkFocusInitial (click)="submitForm()">Add</button>
+</mat-dialog-actions>

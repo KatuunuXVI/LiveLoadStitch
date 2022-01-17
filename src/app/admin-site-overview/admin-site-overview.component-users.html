@@ -1,0 +1,34 @@
+<mat-card class="admin-site-overview-content content-card">
+  <div class="admin-site-left">
+    <div class="admin-site-header">
+      <span class="admin-site-title">{{sitename}}</span>
+      <button mat-icon-button>
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+    <div class="admin-site-user-container">
+      <div class="admin-site-user-header">
+        <span class="admin-site-user-title">Site Logins:</span>
+        <span class="admin-site-user-header-spacer"></span>
+        <button mat-stroked-button>+ Add Login</button>
+      </div>
+      <div class="admin-site-user-list">
+        <app-admin-user-info *ngFor="let user of users" [name]="user.name" [role]="user.role"></app-admin-user-info>
+      </div>
+    </div>
+  </div>
+  <div class="admin-site-right">
+    <a routerLink="/main/units" routerLinkActive="active" >
+      <google-map height="100%" width="100%" [zoom]="zoom" [center]="center" [options]="options" style="cursor:pointer;">
+        <map-marker
+          *ngFor="let marker of markers"
+          [position]="marker.position"
+          [label]="marker.label"
+          [title]="marker.title"
+          [options]="markerOptions"
+        >
+        </map-marker>
+      </google-map>
+    </a>
+  </div>
+</mat-card>

@@ -1,0 +1,61 @@
+<mat-dialog-content>
+  <div class="edit-site-top-content">
+    <div class="edit-site-split-content-left">
+      <div mat-dialog-title>
+        Add Site:
+      </div>
+      <mat-form-field appearance="outline" class="name-field">
+        <mat-label>Site Name</mat-label>
+        <input matInput [(ngModel)]="sitename">
+      </mat-form-field>
+    </div>
+    <div class="edit-site-split-content-right">
+      <div class="users-label">Users:</div>
+      <div class="user-list-container">
+        <div class="user-list">
+          <app-admin-user-info
+                  *ngFor="let user of users"
+                  [name]="user.name"
+                  [role]="user.role"
+                  [email]="user.email">
+          </app-admin-user-info>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="units-container">
+    <div class="edit-site-split-content">
+      <div class="units-label">All Units:</div>
+      <div class="units-box">
+        <div class="units-list">
+          <app-site-unit-box
+                  *ngFor="let unit of allUnits"
+                  [buttonIcon]="'add'"
+                  [name]="unit.name"
+                  [address]="unit.address"
+                  (whenClick)="addUnit(unit)">
+          </app-site-unit-box>
+        </div>
+      </div>
+    </div>
+    <div class="edit-site-split-content">
+      <div class="units-label">This Site:</div>
+      <div class="units-box">
+        <div class="units-list">
+          <app-site-unit-box
+                  *ngFor="let unit of siteUnits"
+                  [buttonIcon]="'remove'"
+                  [name]="unit.name"
+                  [address]="unit.address"
+                  (whenClick)="removeUnit(unit)">
+          </app-site-unit-box>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-stroked-button mat-dialog-close>Cancel</button>
+  <button mat-stroked-button (click)="submitForm()" cdkFocusInitial>Submit</button>
+</mat-dialog-actions>

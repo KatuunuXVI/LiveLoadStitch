@@ -1,0 +1,31 @@
+<app-titlebox [titleText]="'Overview of '" [showSiteName]="true" [showSiteDropdown]="true" (onSitenameChange)="getNewData($event)"></app-titlebox>
+<div class="card-holder">
+  <mat-card class="content-card content-card-split content-card-split-first">
+    <div class="content-card-title">Unit Updates:</div>
+    <div class="update-holder">
+      <app-unit-update *ngFor="let update of updateData"
+                       [type]="update.type"
+                       [datePosted]="update.datePosted"
+                       [batteryData]="update.batteryData"
+                       [moveData]="update.moveData"
+                       [numLoads]="update.numLoads"
+                       [unitName]="update.unitName" >
+      </app-unit-update>
+    </div>
+  </mat-card>
+  <mat-card class="content-card content-card-split">
+    <div class="content-card-title">Activity:</div>
+    <div class="load-box">
+
+      <div class="load-box-container">
+        <ag-grid-angular #agGrid
+                         class="ag-theme-alpine-dark recent-grid"
+                         [rowData]="rowData"
+                         [columnDefs]="columnDefs"
+                         (firstDataRendered)="onFirstDataRendered($event)"
+        >
+        </ag-grid-angular>
+      </div>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,39 @@
+<div mat-dialog-title>
+  User Settings:
+</div>
+<mat-dialog-content class="dialog-content-flex">
+  <mat-form-field appearance="outline">
+    <mat-label>Username</mat-label>
+    <input matInput required [(ngModel)]="data.username">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput required type="email" [(ngModel)]="data.email">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Change Password</mat-label>
+    <input matInput type="password" [(ngModel)]="password">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Confirm Password</mat-label>
+    <input matInput type="password" [(ngModel)]="confirmPass">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Original Password</mat-label>
+    <input matInput type="password" [(ngModel)]="oldPass">
+  </mat-form-field>
+
+<!--  <mat-file-upload-->
+<!--    [labelText]="'Update profile picture: '"-->
+<!--    [selectButtonText]="'Select File'"-->
+<!--    [showUploadButton]="false"-->
+<!--    [acceptedTypes]="'.png, .jpg, .jpeg'"-->
+<!--    (selectedFilesChanged)="updatePicture($event)"-->
+<!--  >-->
+<!--  </mat-file-upload>-->
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-stroked-button mat-dialog-close>Cancel</button>
+  <button mat-stroked-button cdkFocusInitial (click)="submitForm()">Submit</button>
+</mat-dialog-actions>

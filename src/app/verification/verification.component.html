@@ -1,0 +1,22 @@
+<video playsinline autoplay muted loop>
+    <source src="/assets/roadcam.mp4" type="video/mp4">
+</video>
+<div class="main-container">
+    <img src="/assets/LiveLoad Logo.png" alt="" class="logo">
+    <br />
+    <div class="title">Enter Your Verification Code:</div>
+    <form>
+        <mat-form-field appearance="outline" class="username-field">
+            <mat-label>Verification Code</mat-label>
+            <input matInput name="code" [(ngModel)]="code">
+        </mat-form-field>
+        <br />
+        <button class="res-button" mat-raised-button (click)="resendEmail()">
+            Resend Email
+        </button>
+        <button class="sub-button" mat-raised-button (click)="attemptVerification()">
+            Submit
+            <mat-icon class="submit-icon">navigate_next</mat-icon>
+        </button>
+    </form>
+</div>

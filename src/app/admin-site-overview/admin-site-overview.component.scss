@@ -1,0 +1,103 @@
+@import "variables.scss";
+
+.admin-site-overview-content {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  //align-items: center;
+  height: 325px;
+  margin: 0 16px 16px 16px;
+}
+
+.admin-site-left {
+  width: 50%;
+  //margin-top: -20px !important;
+}
+
+.admin-site-right {
+  margin-left: 15px;
+  width: 50%;
+  height: 100%;
+}
+
+.admin-site-header {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  white-space: nowrap;
+
+  margin-left: 10px;
+  //margin-top: -20px;
+}
+
+.admin-site-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.admin-site-user-container {
+  margin-left: 20px;
+}
+
+.admin-site-left-container {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.admin-site-user-header {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.admin-site-user-header-spacer {
+  flex: 1 1 auto;
+}
+
+.admin-site-user-title {
+  font-size: 20px;
+}
+
+.admin-site-user-list {
+  margin-top: 10px;
+  overflow: auto;
+  height: 205px;
+}
+
+.admin-site-chart-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  height: 205px;
+}
+
+.button-container {
+  width: 100px;
+}
+
+.chart-button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 0 10px;
+}
+
+.chart-button mat-icon {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.chart-button-selected {
+  background-color: $primary-text;
+  color: $primary;
+}
+
+.admin-site-chart-box {
+  width: 100%;
+  margin-left: -5px;
+}

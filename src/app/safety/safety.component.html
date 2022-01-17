@@ -1,0 +1,14 @@
+<app-titlebox [titleText]="'Admin Overview'" [addText]="'Add Site'" [addComponent]="addComponent" (whenAdd)="addSite($event)"></app-titlebox>
+<app-safety-site-overview
+
+></app-safety-site-overview>
+<ag-grid-angular
+    #agGrid
+    class="ag-theme-alpine-dark loads-grid"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    (firstDataRendered)="onFirstDataRendered($event)"
+    (rowDataChanged)="onGridReady($event)"
+>
+</ag-grid-angular>

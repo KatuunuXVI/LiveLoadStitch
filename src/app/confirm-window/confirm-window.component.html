@@ -1,0 +1,13 @@
+<div mat-dialog-title>
+    Confirm Updated Email:
+</div>
+<mat-dialog-content class="dialog-content-flex">
+    <mat-form-field appearance="outline">
+        <mat-label>Confirmation Code:</mat-label>
+        <input matInput required [(ngModel)]="confirmCode">
+    </mat-form-field>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-stroked-button cdkFocusInitial (click)="submitForm()">Submit</button>
+</mat-dialog-actions>

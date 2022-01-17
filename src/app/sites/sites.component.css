@@ -1,0 +1,19 @@
+.update-holder {
+  margin: 10px 10px;
+  overflow: scroll;
+  height: calc(100% - 25px);
+}
+
+.load-box {
+  height: calc(100% - 30px);
+  margin-top: 10px;
+}
+
+.load-box-container {
+  height: 50%;
+}
+
+.recent-grid {
+  height: calc(100% - 40px);
+  margin-top: 5px;
+}

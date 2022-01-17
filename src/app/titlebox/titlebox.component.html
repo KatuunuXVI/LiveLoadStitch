@@ -1,0 +1,25 @@
+<span class="title-box">
+  <span class="title-value">{{titleText}}{{selectedSitename}}:</span>
+  <button mat-raised-button class="add-button" *ngIf="addText" (click)="addClick()">+ {{addText}}</button>
+  <button *ngIf="showSiteDropdown" mat-stroked-button [matMenuTriggerFor]="menu" style="margin-left: 15px">
+    <span>Select Site</span>
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" class="dropdown-menu">
+    <button mat-menu-item routerLink="./">
+      All Sites
+    </button>
+    <button *ngFor="let site of sites" mat-menu-item
+            routerLink="./" [queryParams]="{site: site.site_id}">
+      {{site.site_name}}
+    </button>
+  </mat-menu>
+  <span class="title-spacer"></span>
+  <button mat-raised-button color="accent" class="download-button" *ngIf="download" (click)="downloadClick()">
+    <mat-icon class="download-icon">get_app</mat-icon>
+    Download Data
+  </button>
+  <button mat-icon-button (click)="reloadData()">
+    <mat-icon>refresh</mat-icon>
+  </button>
+</span>

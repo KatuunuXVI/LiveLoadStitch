@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "auth": {
+      "liveloadfrontendc7b5f1b6": [
+        "read"
+      ]
+    }
+  },
+  "lambdaLayers": [
+    {
+      "type": "ExternalLayer",
+      "arn": "arn:aws:lambda:us-east-2:913574404753:layer:pgLayer:2"
+    },
+    {
+      "type": "ExternalLayer",
+      "arn": "arn:aws:lambda:us-east-2:913574404753:layer:jwt-layer:2"
+    }
+  ]
+}

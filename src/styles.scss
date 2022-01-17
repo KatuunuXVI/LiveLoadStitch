@@ -1,0 +1,148 @@
+@import "_variables.scss";
+
+body {
+  background-color: #1f1f1f;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Noto Sans JP, "Helvetica Neue", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0;
+  /*padding-right: 0.5em;*/
+  /*margin-right: 0.5em;*/
+}
+
+::-webkit-scrollbar-button {
+  background: transparent;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  width: 0.25em;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(66, 66, 66);
+  border-radius: 5px;
+  width: 0.25em;
+}
+
+
+/* mat-form-field is terribly designed*/
+.mat-form-field-wrapper {
+  padding: 0;
+}
+
+//.mat-form-field-infix {
+//  padding: 15px 0 4px 0 !important;
+//  /*padding: 0 !important;*/
+//  border-top: none;
+//}
+
+.mat-form-field-label-wrapper {
+  /*padding-top: 0;*/
+  /*top: 0;*/
+}
+
+.mat-select-panel {
+  background: $primary;
+}
+
+.mat-option-text {
+  color: $primary-text;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: $primary-text !important;
+}
+
+.mat-form-field.mat-focused .mat-select-arrow {
+  color: $primary-text !important;
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline {
+  color: $primary-text;
+}
+
+.dropdown-menu {
+  width: 125px;
+}
+
+button.mat-menu-item {
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 15px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.mat-dialog-container {
+  background-color: $background-card-color;
+}
+
+.mat-dialog-title {
+  margin: 0 0 10px;
+}
+
+input {
+  caret-color: $primary-text !important;
+}
+
+.dialog-content-flex {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.dialog-content-flex mat-form-field {
+  margin-bottom: 15px;
+}
+
+mat-file-upload .mat-button {
+  color: $primary-text !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.user-menu {
+  background: $accent;
+}
+
+.snack-bar {
+  background-color: $accent;
+  color: $primary-text;
+}
+
+.error-snackbar {
+  background-color: $primary;
+  color: $warning-color;
+  min-width: 0 !important;
+}
+
+.error-snackbar > .mat-simple-snackbar {
+  justify-content: center;
+}
+
+
+.success-snackbar {
+  background-color: $primary;
+  color: $active-color;
+  min-width: 0 !important;
+}
+
+.success-snackbar > .mat-simple-snackbar {
+  justify-content: center;
+}

@@ -1,0 +1,58 @@
+.chart-container {
+  /*margin-top: 10px;*/
+  width: 100%;
+  height: calc(100% - 70px);
+}
+
+.controls-container {
+  margin-bottom: 15px;
+}
+
+mat-form-field {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+
+::ng-deep .mat-form-field-flex > .mat-form-field-infix {
+  padding: 0.4em 0 0.7em 0 !important;
+}
+
+::ng-deep .mat-form-field-label-wrapper {
+  top: -1.5em;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-1.1em) scale(.75);
+  width: 133.33333%;
+}
+
+.costs-card {
+  margin: 0 15px;
+  height: calc(100% - 230px)
+}
+
+.client-scroller {
+  margin: 10px 15px 0 15px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  align-content: flex-start;
+  height: 125px;
+
+  align-items: center;
+}
+
+.client-add-button {
+  margin-right: 15px;
+}
+.loads-grid {
+  margin: 0 15px;
+  width: calc(100% - 30px);
+  height: calc(100% - 60px);
+}
+
+.TT {
+  background-color: lime;
+}
+

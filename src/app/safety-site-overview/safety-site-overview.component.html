@@ -1,0 +1,77 @@
+
+<mat-card class="safety-site-overview-content content-card">
+    <div class="safety-site-left">
+        <div class="safety-site-header">
+            <span class="safety-site-title">{{sitename}}</span>
+            <button mat-icon-button (click)="openDialog()">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </div>
+        <div class="safety-site-left-container">
+            <div class="safety-site-user-header">
+                <span class="safety-site-user-title">Activity in the Past 24 Hours:</span>
+                <span class="safety-site-user-header-spacer"></span>
+            </div>
+            <div class="safety-site-chart-container">
+                <div class="safety-site-chart-box">
+                    <ngx-charts-area-chart class="dark"
+                                           [scheme]="colorMap[currentChart]"
+                                           [legend]="false"
+                                           [showYAxisLabel]="true"
+                                           [xAxis]="true"
+                                           [yAxis]="true"
+                                           [yAxisLabel]="labelMap[currentChart]"
+                                           [timeline]="false"
+                                           [results]="resultMap[currentChart]"
+                                           [xScaleMin]="scaleMin"
+                                           [xScaleMax]="scaleMax"
+                                           [tooltipDisabled]="false"
+                    >
+                        <ng-template #tooltipTemplate let-model="model">
+                            {{model.name.toLocaleString()}} <br />
+                            <span style="font-size: 13px">{{model.series}}: {{model.value}}</span>
+                        </ng-template>
+                    </ngx-charts-area-chart>
+                </div>
+                <div class="button-container">
+                    <button mat-raised-button class="chart-button"
+                            (click)="currentChart = 'safety'"
+                            [ngClass]="{'chart-button-selected' : currentChart === 'safety'}"
+                    >
+                        <mat-icon>payments</mat-icon>
+                        Trench Violations
+                    </button>
+                    <button mat-raised-button class="chart-button"
+                            (click)="currentChart = 'loads'"
+                            [ngClass]="{'chart-button-selected' : currentChart === 'loads'}"
+                    >
+                        <mat-icon>category</mat-icon>
+                        Near Misses
+                    </button>
+                    <button mat-raised-button class="chart-button"
+                            (click)="currentChart = 'volume'"
+                            [ngClass]="{'chart-button-selected' : currentChart === 'volume'}"
+                    >
+                        <mat-icon>equalizer</mat-icon>
+                        Unsafe Behaviors
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="safety-site-right">
+
+        <!--<google-map #gmap height="100%" width="100%" [options]="options" >
+          <map-marker
+            *ngFor="let marker of markers"
+            [position]="marker.position"
+            [label]="marker.label"
+            [title]="marker.title"
+            [options]="markerOptions"
+          >
+          </map-marker>
+        </google-map>-->
+
+    </div>
+</mat-card>

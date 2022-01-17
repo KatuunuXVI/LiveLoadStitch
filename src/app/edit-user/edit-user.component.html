@@ -1,0 +1,24 @@
+<div mat-dialog-title>
+  Edit User:
+</div>
+<mat-dialog-content class="dialog-content-flex">
+  <mat-form-field appearance="outline">
+    <mat-label>Username</mat-label>
+    <input matInput required [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput required type="email" [(ngModel)]="data.email">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Role / Title</mat-label>
+    <input matInput required [(ngModel)]="data.role">
+  </mat-form-field>
+  <button mat-stroked-button class="reset-button">
+    Reset Password
+  </button>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-stroked-button mat-dialog-close>Cancel</button>
+  <button mat-stroked-button cdkFocusInitial (click)="submitForm()">Submit</button>
+</mat-dialog-actions>

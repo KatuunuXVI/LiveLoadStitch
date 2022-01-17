@@ -1,0 +1,32 @@
+<app-titlebox [titleText]="'Unit Detail for '" [showSiteName]="true" [showSiteDropdown]="true"></app-titlebox>
+<mat-card class="content-card content-card-full">
+    <mat-sidenav-container class="units-container">
+        <mat-sidenav mode="side" opened class="units-sidenav">
+            <app-unit-info-box
+                    *ngFor="let unit of units"
+                    [id]="unit.unit_id"
+                    [name]="unit.unit_name"
+                    [address]="'Address'"
+                    [loadCount]="unit.load_count"
+                    (whenEdit)="addMarkers()"
+            >
+            </app-unit-info-box>
+        </mat-sidenav>
+        <mat-sidenav-content class="units-map-container">
+
+            <app-map></app-map>
+            <!--<div class="units-map">
+              <google-map #gmap height="100%" width="100%" [options]="options">
+                <map-marker
+                  *ngFor="let marker of markers"
+                  [position]="marker.position"
+                  [label]="marker.label"
+                  [title]="marker.title"
+                  [options]="marker.options"
+                >
+                </map-marker>
+              </google-map>
+            </div>-->
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</mat-card>
